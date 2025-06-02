@@ -13,25 +13,25 @@
             <td onclick="digitBtnPressed(7)">7</td>
             <td onclick="digitBtnPressed(8)">8</td>
             <td onclick="digitBtnPressed(9)">9</td>
-            <td>x</td>
+            <td onclick="operateBtnPressed('x')">x</td>
          </tr>
          <tr>
             <td onclick="digitBtnPressed(4)">4</td>
             <td onclick="digitBtnPressed(5)">5</td>
             <td onclick="digitBtnPressed(6)">6</td>
-            <td>-</td>
+            <td onclick="operateBtnPressed('-')">-</td>
          </tr>   
          <tr>
             <td onclick="digitBtnPressed(1)">1</td>
             <td onclick="digitBtnPressed(2)">2</td>
             <td onclick="digitBtnPressed(3)">3</td>
-            <td>+</td>
+            <td onclick="operateBtnPressed('+')">+</td>
          </tr>   
          <tr>
-            <td colspan="2">0</td>
+            <td colspan="2" onclick="digitBtnPressed(0)">0</td>
 
             <td onclick="btnAcPressed()">AC</td>
-            <td>/</td>
+            <td onclick="operateBtnPressed('/')">/</td>
          </tr>
          <tr>
             <td colspan="4">=</td>
@@ -41,6 +41,12 @@
             
   <script>
  var newLine =true;
+ var value1;
+ var currentOperator;
+
+    function btnEqualsPressed(){
+     
+    }
 
     function digitBtnPressed(button){
      
@@ -58,6 +64,21 @@
       newLine = true;
     }
 
+    function operateBtnPressed(operator){
+       currentOperator = operator;
+       value1 = parseInt(document.getElementById("screen").value);
+      
+       newLine = true;
+    }   
+
+    switch(currentOperator){
+      case '+':
+      document.getElementById("screen").value = value1 + parseInt(document.getElementById("screen").value);
+      break;
+      case '-':
+      document.getElementById("screen").value = value1 - parseInt(document.getElementById("screen").value);
+      break; 
+    }
   </script>      
 
 </body>
