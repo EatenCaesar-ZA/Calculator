@@ -13,7 +13,7 @@
             <td onclick="digitBtnPressed(7)">7</td>
             <td onclick="digitBtnPressed(8)">8</td>
             <td onclick="digitBtnPressed(9)">9</td>
-            <td onclick="operateBtnPressed('x')">x</td>
+            <td onclick="operateBtnPressed('*')">x</td>
          </tr>
          <tr>
             <td onclick="digitBtnPressed(4)">4</td>
@@ -34,20 +34,17 @@
             <td onclick="operateBtnPressed('/')">/</td>
          </tr>
          <tr>
-            <td colspan="4">=</td>
+            <td colspan="4" onclick="equalsBtnPressed()">=</td>
                
          </tr>   
 </table>
             
   <script>
- var newLine =true;
+ var newLine =true; //Boolean variable to check if a new line is required
  var value1;
  var currentOperator;
 
-    function btnEqualsPressed(){
-     
-    }
-
+    //Event handler for digit buttons
     function digitBtnPressed(button){
      
       if(newLine){
@@ -59,11 +56,13 @@
     }
     }
 
+    //Event handler for AC button
     function btnAcPressed(){
       document.getElementById("screen").value = 0;
       newLine = true;
     }
 
+    //Event handler for operator buttons
     function operateBtnPressed(operator){
        currentOperator = operator;
        value1 = parseInt(document.getElementById("screen").value);
@@ -71,13 +70,32 @@
        newLine = true;
     }   
 
-    switch(currentOperator){
-      case '+':
-      document.getElementById("screen").value = value1 + parseInt(document.getElementById("screen").value);
-      break;
-      case '-':
-      document.getElementById("screen").value = value1 - parseInt(document.getElementById("screen").value);
-      break; 
+     //Event handler for equal button
+
+    function equalsBtnPressed(){
+      var value2 = parseInt(document.getElementById("screen").value);
+      var finalTotal;
+
+      switch (currentOperator){
+         case"+":
+         finalTotal = value1 + value2;
+         break;
+         case"-":
+         finalTotal = value1 - value2;
+         break;
+
+         case"*":
+         finalTotal = value1 * value2;
+         break;
+
+         case"/":
+         finalTotal = value1 / value2;
+         break;
+      }
+     document.getElementById("screen").value = finalTotal;
+
+     value1 = 0;
+     newLine = true;
     }
   </script>      
 
