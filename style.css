@@ -1,69 +1,42 @@
 /*===========Styling for the Table===========*/
 
 table {
-    font-family: 'Orbitron', sans-serif; /* Futuristic cyberpunk font */
-    color: #ffffff;
+    color: #fff;
     text-align: center;
-    border: 2px solid #ff00ff;
-    margin: auto;
-    background-color: #00ffff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #ff00ff, 0px 0px 20px #00ffff; /* Neon glow effect */
+    border-collapse: collapse;
+    font: normal 3em Arial,helvetica,sans-serif;
 }
 /*===========Styling for the Input===========*/
 input {
     width: 100%;
-    padding: 2px;
     font-size: 2em;
     text-align: right;
-    background-color: #ffcc00; /* Electric yellow */
+    background-color: #4e494d;
     border: 0px;
-    color: #000;
+    color: #fff;
 }
 /*===========Styling for the Digits===========*/
 td {
     width: 25vw;
-    font-size: 20px;
-    background-color: #ff5500; /* Neon orange */
-    border: 2px solid #ffffff;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-}
-
-td:hover {
-    background-color: #ff00ff; /* Neon pink glow on hover */
-    box-shadow: 0px 0px 10px #ff00ff;
+  border: 1 solid #4e494d;
 }
 
 tr {
     height: 16.02vh;
+    background-color: #4e494d;
 }
 
 /*===========Styling for the Operator Buttons===========*/
 .operatorBtn{
-    background-color: #00ff00 !important;
+    background-color: #ff9e46;
 }
 
-.operatorBtn:hover{
-    background-color: #ff00ff !important; /* Neon pink glow on hover */
-    box-shadow: 0px 0px 10px #ff00ff !important;
-}
 
 .equalsBtn{
-    background-color: #00ff00 !important;
+    background-color: #ff9e46; !important;
 }
 
-.equalsBtn:hover{
-    background-color: #ff00ff !important; /* Neon pink glow on hover */
-    box-shadow: 0px 0px 10px #ff00ff !important;
-}
 
 .ACBtn{
-    background-color: #853008 !important;
-}
-
-.ACBtn:hover{
-    background-color: #ff00ff !important; /* Neon pink glow on hover */
-    box-shadow: 0px 0px 10px #ff00ff !important;
+    background-color: #656165;
 }
