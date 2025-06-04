@@ -1,10 +1,69 @@
-#table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
+/*===========Styling for the Table===========*/
 
-  #table td, #table th {
-    border: 1px solid #7a3030;
-    padding: 8px;
-  }
+table {
+    font-family: 'Orbitron', sans-serif; /* Futuristic cyberpunk font */
+    color: #ffffff;
+    text-align: center;
+    border: 2px solid #ff00ff;
+    margin: auto;
+    background-color: #00ffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ff00ff, 0px 0px 20px #00ffff; /* Neon glow effect */
+}
+/*===========Styling for the Input===========*/
+input {
+    width: 100%;
+    padding: 2px;
+    font-size: 2em;
+    text-align: right;
+    background-color: #ffcc00; /* Electric yellow */
+    border: 0px;
+    color: #000;
+}
+/*===========Styling for the Digits===========*/
+td {
+    width: 25vw;
+    font-size: 20px;
+    background-color: #ff5500; /* Neon orange */
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+td:hover {
+    background-color: #ff00ff; /* Neon pink glow on hover */
+    box-shadow: 0px 0px 10px #ff00ff;
+}
+
+tr {
+    height: 16.02vh;
+}
+
+/*===========Styling for the Operator Buttons===========*/
+.operatorBtn{
+    background-color: #00ff00 !important;
+}
+
+.operatorBtn:hover{
+    background-color: #ff00ff !important; /* Neon pink glow on hover */
+    box-shadow: 0px 0px 10px #ff00ff !important;
+}
+
+.equalsBtn{
+    background-color: #00ff00 !important;
+}
+
+.equalsBtn:hover{
+    background-color: #ff00ff !important; /* Neon pink glow on hover */
+    box-shadow: 0px 0px 10px #ff00ff !important;
+}
+
+.ACBtn{
+    background-color: #853008 !important;
+}
+
+.ACBtn:hover{
+    background-color: #ff00ff !important; /* Neon pink glow on hover */
+    box-shadow: 0px 0px 10px #ff00ff !important;
+}
